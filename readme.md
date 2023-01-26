@@ -9,7 +9,7 @@ Stworzenie graficznego projektu strony internetowej w wybranym programie graficz
 
 Opis wykorzystanych technologii: 
 
-HTML (ang. HyperText Markup Language, hipertekstowy język znaczników) – język znaczników stosowany do tworzenia dokumentów hipertekstowych. https://pl.wikipedia.org/wiki/HTML
+HTML (ang. HyperText Markup Language, hipertekstowy język znaczników) – język znaczników stosowany do tworzenia dokumentów hipertekstowych. 
 
 
 CSS (ang. Cascading Style Sheets, co w dosłownym tłumaczeniu oznacza “kaskadowe arkusze stylów”). CSS to język arkuszy stylów, który jest używany do opisywania elementów i ich ułożenia na stronach internetowych. 
