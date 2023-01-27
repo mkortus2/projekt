@@ -2,9 +2,9 @@
 
 
 $conn = mysqli_connect(
-    'localhost',
+    'mariadb',
     'root',
-    '',
+    'password',
     'biblioteka'
 )
 

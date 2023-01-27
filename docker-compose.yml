@@ -1,0 +1,41 @@
+version: '3'
+
+networks:
+  app01-net:
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    ports: 
+      - "3306:3306"
+    expose:
+      - 3306
+    environment:
+      - MARIADB_ROOT_PASSWORD=password
+      - MARIADB_USER=root
+    networks:
+      - app01-net
+    healthcheck:
+      test: "mysqladmin ping -h localhost --user=$$MARIADB_USER --password=$$MARIADB_ROOT_PASSWORD"
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+
+  app01:
+    build: .
+    container_name: app01
+    ports:
+      - "80:80"
+    expose:
+      - 80
+    networks:
+      - app01-net
+    environment:
+      - MARIADB_ROOT_PASSWORD=password
+      - MARIADB_USER=root
+    depends_on:
+      mariadb:
+        condition: service_healthy
+
